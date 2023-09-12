@@ -12,6 +12,8 @@ author:
         url: https://publichealth.jhu.edu/departments/biostatistics
 description: "An overview of the ggplot2 plotting system in R with qplot()"
 categories: [module 3, week 3, R, programming, ggplot2, data viz]
+editor_options: 
+  chunk_output_type: console
 ---
 
 *This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
@@ -315,12 +317,16 @@ If we wanted to use `qplot()` to map `flipper_length_mm` and `bill_length_mm` to
 
 ```{r}
 # try it yourself
+qplot(y = hwy, x = displ, data = mpg, color = drv)
+
+qplot(y = bill_length_mm, x = flipper_length_mm, data = penguins)
 ```
 
 Now try mapping color to the `species` variable on top of the code you just wrote:
 
 ```{r}
 # try it yourself
+qplot(y = bill_length_mm, x = flipper_length_mm, data = penguins, color = species)
 ```
 :::
 
